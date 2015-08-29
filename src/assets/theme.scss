@@ -7,19 +7,8 @@ img {
   max-width: 100%;
 }
 
-.hero {
-	background: url('/assets/cityskyline.jpg');
-	background-size: cover;
-}
+@import "homepage";
 
-
-.career-panel {
-  text-align: center;
-  background: $purple;
-  color: #fff;
-  padding: 30px 0;
-  margin-bottom: 30px;
-}
 /**  Offcanvas Nav  http://www.designcouch.com/demos/pure-css-drawer-menu.html**/
 
 * {
@@ -70,16 +59,43 @@ we're going to style the label instead */
 
 /* adds our "hamburger" menu icon */
 
-#drawer-toggle-label:before {
-	content: '';
-	display: block;
-	position: absolute;
-	height: 2px;
-	width: 24px;
-	background: $blue;
-	left: 13px;
-	top: 18px;
-	box-shadow: 0 6px 0 $blue, 0 12px 0 $blue;
+@media (max-width: 766px) {
+	#drawer-toggle-label:before {
+		content: '';
+		display: block;
+		position: absolute;
+		height: 2px;
+		width: 24px;
+		background: $blue;
+		left: 13px;
+		top: 18px;
+		box-shadow: 0 6px 0 $blue, 0 12px 0 $blue;
+	}
+	#drawer {
+		left:-300px;
+	}
+
+
+	/* actual page content pane */
+
+	#page-content {
+		margin-left: 0px;
+		// margin-top: 50px;
+		// height: calc(100% - 50px);
+		overflow-x:hidden;
+		overflow-y:scroll;
+		-webkit-overflow-scrolling: touch;
+	}
+}
+@media (min-width: 767px) {
+	#page-content {
+		margin-left: 300px;
+		width: calc(100% - 300px);
+	}
+
+	#drawer {
+		left: 0px;
+	}
 }
 
 /* Uncomment if you want text in the above navbar
@@ -94,13 +110,12 @@ header {
 	z-index: 0;
 }
 */
-
 /* drawer menu pane - note the 0px width */
 
 #drawer {
 	position: fixed;
 	top: 0;
-	left:-300px;
+
 	height: 100%;
 	width: 300px;
 	background: #fff;
@@ -110,25 +125,10 @@ header {
 	-webkit-overflow-scrolling: touch;
 }
 
-/* actual page content pane */
-
-#page-content {
-	margin-left: 0px;
-	margin-top: 50px;
-	width: 100%;
-	height: calc(100% - 50px);
-	overflow-x:hidden;
-	overflow-y:scroll;
-	-webkit-overflow-scrolling: touch;
-	padding: 20px;
-}
 
 /* checked styles (menu open state) */
 
 #drawer-toggle:checked ~ #drawer-toggle-label {
-	height: 100%;
-	width: calc(100% - 300px);
-	background: #fff;
 }
 
 #drawer-toggle:checked ~ #drawer-toggle-label,
@@ -142,6 +142,7 @@ header {
 
 #drawer-toggle:checked ~ #page-content {
 	margin-left: 300px;
+	width: calc(100% - 300px);
 }
 
 /* Menu item styles */
@@ -185,7 +186,6 @@ header {
 	#drawer-toggle:checked ~ #page-content {
 		margin-left: calc(100% - 50px);
 	}
-
 }
 
 /** Temporary styling **/
