@@ -5,20 +5,25 @@
 </div>
 
 <section id="facts">
-  <p><span class="highlight">Education: </span>{{ education }}</p>
-  <p><span class="highlight">Salary: </span>{{ salary }}</p>
-  <p><span class="highlight">Related Majors: </span>{{ related_majors }}</p>
+  <h2 class="fast-facts">Fast Facts:</h2>
+
+  <div class="facts">
+    <p><span class="highlight">Education: </span>{{ education }}</p>
+    <p><span class="highlight">Salary: </span>{{ salary }}</p>
+    <p><span class="highlight">Related Majors: </span>{{ related_majors }}</p>
+  </div>
+
 </section>
 
 <section id="description">
-<h2>Description</h2>
+<h2>What is {{title}}?</h2>
 </p>{{ description }}</p>
 </section>
 
 <section id="connect">
 	<h2>Day in the life</h2>
 	{{#each contacts}}
-		
+
 	{{/each}}
 </section>
 

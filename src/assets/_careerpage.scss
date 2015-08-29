@@ -15,3 +15,25 @@
     }
   }
 }
+
+#facts {
+  background: $purple;
+  padding: 15px 30px 30px;
+  h2 {
+    color: #fff;
+  }
+  .facts {
+    background: #fff;
+    border-radius: 3px;
+    border-style: none;
+    padding: 15px;
+    font-size: 1.3em;
+    .highlight {
+      color: $orange;
+    }
+  }
+}
+
+#description {
+  padding: 30px;
+}

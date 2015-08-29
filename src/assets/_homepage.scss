@@ -47,6 +47,13 @@ span.light {
     font-size: 4em;
   }
   background: #fff;
+  a {
+    color: inherit;
+    &:hover {
+      text-decoration: none;
+      color: black;
+    }
+  }
 }
 
 .row {
