@@ -11,6 +11,7 @@ img {
 }
 
 @import "homepage";
+@import "careerpage";
 
 /**  Offcanvas Nav  http://www.designcouch.com/demos/pure-css-drawer-menu.html**/
 
@@ -203,7 +204,10 @@ header {
 
 /** Temporary styling **/
 .sidenav-logo {
-	height: 150px;
-	background-color: $purple;
+	text-align: center;
+	h3 {
+
+		color: $purple;
+	}
 }
 

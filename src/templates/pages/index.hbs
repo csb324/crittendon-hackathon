@@ -24,8 +24,10 @@ layout: default.hbs
       {{#each pages}}
         <div class="col-sm-4">
           <div class="career-panel">
+            <a href="/{{basename}}.html">
             {{ data.title }}
             <i class="glyphicon glyphicon-{{ data.icon }}"></i>
+            </a>
           </div>
         </div>
       {{/each}}
