@@ -6,10 +6,8 @@ layout: homepage.hbs
 ---
 
 <section class="hero">
-
   <h1>Red Carpet Careers</h1>
   <a href="#careers" class="btn">Explore Careers</a>
-
 </section>
 
 <section class="intro">
@@ -23,7 +21,19 @@ layout: homepage.hbs
 
 <section id="careers">
   <div class="row">
-
+  {{#tags}}
+    {{#is tag "careers"}}
+      {{#each pages}}
+        <div class="col-sm-4">
+          <div class="career-panel">
+            {{ data.title }}
+            <i class="glyphicon glyphicon-{{ data.icon }}"></i>
+            <img src="{{assets}}/{{data.header_photo}}" alt="{{data.title}}">
+          </div>
+        </div>
+      {{/each}}
+    {{/is}}
+  {{/tags}}
   </div>
 </section>
 
