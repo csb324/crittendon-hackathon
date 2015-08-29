@@ -9,13 +9,26 @@
 </section>
 
 <section id="description">
-{{ description }}
+<h2>Description</h2>
+</p>{{ description }}</p>
 </section>
 
 <section id="connect">
+	<h2>Day in the life</h2>
+	{{#each contacts}}
+		
+	{{/each}}
 </section>
 
 <section id="internships">
-
+	<h2>Internships</h2>
+	{{#each internships}}
+		<div class="panel panel-default col-md-4">
+		  <div class="panel-heading">{{company}}</div>
+		  <div class="panel-body">
+		    {{lead}}
+		  </div>
+		</div>
+	{{/each}}
 </section>
 
