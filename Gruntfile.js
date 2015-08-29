@@ -74,17 +74,12 @@ module.exports = function(grunt) {
         layoutdir: '<%= config.src %>/templates/layouts',
         data: '<%= config.src %>/data/*.{json,yml}',
         partials: '<%= config.src %>/templates/partials/*.hbs',
-        plugins: ['assemble-contrib-permalinks','assemble-contrib-sitemap'],
+        plugins: ['assemble-contrib-permalinks','assemble-contrib-sitemap']
       },
 
       pages: {
         files: {
           '<%= config.dist %>/': ['<%= config.src %>/templates/pages/*.hbs']
-        }
-      },
-      careers: {
-        files: {
-          '<%= config.dist %>/': ['<%= config.src %>/templates/careers/*.hbs']
         }
       }
 
@@ -95,6 +90,13 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'bower_components/bootstrap/dist/',
         src: '**',
+        dest: '<%= config.dist %>/assets/'
+      },
+
+      images: {
+        expand: true,
+        cwd: '<%= config.src %>/assets/',
+        src: '*.{jpg,jpeg,gif,png}',
         dest: '<%= config.dist %>/assets/'
       }
     },
