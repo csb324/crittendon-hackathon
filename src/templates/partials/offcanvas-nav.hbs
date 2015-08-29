@@ -1,0 +1,18 @@
+---
+component: offcanvas-navbar
+---
+<!-- Offcanvas navbar -->
+<input type="checkbox" id="drawer-toggle" name="drawer-toggle" checked/>
+<label for="drawer-toggle" id="drawer-toggle-label"></label>
+<nav id="drawer">
+  <div class="sidenav-logo">
+  	Logo Here
+  </div>
+  <ul>
+    {{#each pages}}
+    <li{{#if this.isCurrentPage}} class="active"{{/if}}>
+      <a href="{{relative dest this.dest}}">{{ data.title }}</a>
+    </li>
+    {{/each}}
+  </ul>
+</nav>
