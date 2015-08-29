@@ -1,21 +1,55 @@
 .hero {
   background: url('/assets/cityskyline.jpg');
   background-size: cover;
-  height: 40vh;
+  min-height: 40vh;
   overflow: hidden;
+  text-align: center;
+  span.light {
+    font-weight: 300;
+  }
+  h1 {
+    color: $purple;
+    font-size: 4em;
+  }
+  a.explore-btn {
+    font-family: $sans-serif;
+    display: inline-block;
+    padding: 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 30px;
+    background: $orange;
+    border: solid darken($orange, 5%);
+    border-width: 0px 0px 3px 0px;
+    color: #fff;
+    &:hover {
+      border-width: 3px 0 0 0;
+      text-decoration: none;
+    }
+  }
 }
 
+#careers {
+  background: $yellow;
+  padding: 30px 0;
+}
 .career-panel {
   text-align: center;
-  background: $purple;
-  color: #fff;
-  padding: 30px 0;
-  height: 70px;
+  padding: 10px 0;
+  height: 100px;
   margin-bottom: 30px;
-}
-  .row {
-    margin: 0;
+  font-family: $sans-serif;
+  text-transform: uppercase;
+  i {
+    display: block;
+    font-size: 4em;
   }
+  background: #fff;
+}
+
+.row {
+  margin: 0;
+}
 
 .intro {
   padding: 30px;

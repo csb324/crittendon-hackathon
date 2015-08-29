@@ -3,6 +3,9 @@ $yellow: #F9B212;
 $purple: #482451;
 $blue: #022F9F;
 
+$serif: "Merriweather", serif;
+$sans-serif: "Oswald", Arial, sans-serif;
+
 img {
   max-width: 100%;
 }
@@ -31,6 +34,13 @@ img {
 html,body {
 	height: 100%;
 	overflow: hidden;
+	font-family: $serif;
+}
+
+h1, h2, h3 {
+	font-family: $sans-serif;
+	text-transform: uppercase;
+	font-weight: 400;
 }
 
 /* gets the actual input out of the way;
@@ -90,7 +100,6 @@ we're going to style the label instead */
 	#page-content {
 		margin-left: 300px;
 		width: calc(100% - 300px);
-		overflow-y:scroll;
 	}
 
 	#drawer {
@@ -99,7 +108,7 @@ we're going to style the label instead */
 }
 
 
-#page-content {
+body {
 	overflow-y: scroll;
 }
 /* Uncomment if you want text in the above navbar

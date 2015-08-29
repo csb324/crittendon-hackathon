@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{title}} | {{site.title}}</title>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300|Merriweather:400,900,400italic,300italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- Custom styles for this template -->
     <link href="{{assets}}/css/theme.css" rel="stylesheet">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -17,16 +17,15 @@
   </head>
   <body>
 
-    {{>offcanvas-nav}}
-    <div class="main">
+{{>offcanvas-nav}}
+    <div id="page-content" class="main">
       {{> body }}
     </div>
 
 
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
     <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Include all compiled plugins (below), or include individual files as needed-->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
 </html>
