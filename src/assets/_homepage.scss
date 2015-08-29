@@ -2,6 +2,7 @@
   background: url('/assets/cityskyline.jpg');
   background-size: cover;
   height: 40vh;
+  overflow: hidden;
 }
 
 .career-panel {
@@ -9,5 +10,13 @@
   background: $purple;
   color: #fff;
   padding: 30px 0;
+  height: 70px;
   margin-bottom: 30px;
+}
+  .row {
+    margin: 0;
+  }
+
+.intro {
+  padding: 30px;
 }

@@ -83,7 +83,6 @@ we're going to style the label instead */
 		// margin-top: 50px;
 		// height: calc(100% - 50px);
 		overflow-x:hidden;
-		overflow-y:scroll;
 		-webkit-overflow-scrolling: touch;
 	}
 }
@@ -91,6 +90,7 @@ we're going to style the label instead */
 	#page-content {
 		margin-left: 300px;
 		width: calc(100% - 300px);
+		overflow-y:scroll;
 	}
 
 	#drawer {
@@ -98,6 +98,10 @@ we're going to style the label instead */
 	}
 }
 
+
+#page-content {
+	overflow-y: scroll;
+}
 /* Uncomment if you want text in the above navbar
 header {
 	width: 100%;
