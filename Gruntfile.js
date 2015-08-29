@@ -37,6 +37,10 @@ module.exports = function(grunt) {
         files: '<%= config.src %>/assets/**/*.scss',
         tasks: ['compass']
       },
+      images: {
+        files: '<%= config.src %>/assets/**/*.{jpg,jpeg,gif,png}',
+        tasks: ['copy:images']
+      },
       livereload: {
         options: {
           livereload: '<%= connect.options.livereload %>'
