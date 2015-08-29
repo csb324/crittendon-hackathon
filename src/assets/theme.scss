@@ -3,3 +3,15 @@ $yellow: #F9B212;
 $purple: #482451;
 $blue: #022F9F;
 
+img {
+  max-width: 100%;
+}
+
+
+.career-panel {
+  text-align: center;
+  background: $purple;
+  color: #fff;
+  padding: 30px 0;
+  margin-bottom: 30px;
+}
