@@ -20,14 +20,35 @@
 </p>{{ description }}</p>
 </section>
 
-<section id="connect">
+<section id="connect" class="row">
 	<h2>Day in the life</h2>
+
 	{{#each contacts}}
 
+	  {{#if @first}}
+	    <div>
+	      <img class="left" src="{{img}}"/>
+	      <div class="right">
+		      <h3>{{lead}}</h3>
+		      <blockquote>{{quote}}</blockquote>
+		      <p>{{testimonial}}</p>
+	      </div>
+	    </div>
+	  {{else}}
+		<div class="panel panel-default col-md-3">
+		  <div class="panel-heading">
+		  	<img src="{{img}}"/>
+		  </div>
+		  <div class="panel-body">
+		    {{lead}}
+		  </div>
+		</div>
+	  {{/if}}
 	{{/each}}
+
 </section>
 
-<section id="internships">
+<section id="internships" class="row">
 	<h2>Internships</h2>
 	{{#each internships}}
 		<div class="panel panel-default col-md-4">
