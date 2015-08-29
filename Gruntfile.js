@@ -33,6 +33,10 @@ module.exports = function(grunt) {
         files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml}'],
         tasks: ['assemble']
       },
+      styles: {
+        files: '<%= config.src %>/assets/**/*.scss',
+        tasks: ['compass']
+      },
       livereload: {
         options: {
           livereload: '<%= connect.options.livereload %>'
@@ -85,14 +89,18 @@ module.exports = function(grunt) {
         cwd: 'bower_components/bootstrap/dist/',
         src: '**',
         dest: '<%= config.dist %>/assets/'
-      },
-      theme: {
-        expand: true,
-        cwd: 'src/assets/',
-        src: '**',
-        dest: '<%= config.dist %>/assets/css/'
       }
     },
+
+    compass: {
+      dist: {
+        options: {
+          sassDir: 'src/assets/',
+          cssDir: '<%= config.dist %>/assets/css/'
+        }
+      }
+    },
+
 
     // Before generating any new files,
     // remove any previously-created files.
