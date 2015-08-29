@@ -5,7 +5,7 @@ img {
 
 /* line 1, ../../../src/assets/_homepage.scss */
 .hero {
-  background: url("/assets/cityskyline.jpg");
+  background: url("/crittenton-hackathon/assets/cityskyline.jpg");
   background-size: cover;
   min-height: 40vh;
   overflow: hidden;

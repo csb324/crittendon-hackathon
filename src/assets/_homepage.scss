@@ -1,5 +1,5 @@
 .hero {
-  background: url('/assets/cityskyline.jpg');
+  background: url('/crittenton-hackathon/assets/cityskyline.jpg');
   background-size: cover;
   min-height: 40vh;
   overflow: hidden;
@@ -8,6 +8,7 @@
   h1 {
     color: $purple;
     font-size: 4em;
+    font-weight: 400;
   }
   a.explore-btn {
     font-family: $sans-serif;
