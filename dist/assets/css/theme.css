@@ -122,8 +122,44 @@ span.light {
 }
 
 /* line 37, ../../../src/assets/_careerpage.scss */
-#description {
+#description, #connect, #internships {
   padding: 30px;
+}
+
+/* line 41, ../../../src/assets/_careerpage.scss */
+img.left {
+  float: left;
+}
+
+/* line 45, ../../../src/assets/_careerpage.scss */
+#connect h2 {
+  text-align: center;
+  border-color: #f9b212;
+  border-width: 2px 0;
+  border-style: solid;
+  padding: 10px;
+  font-family: "Merriweather", serif;
+  font-style: italic;
+  font-weight: 300;
+  text-transform: none;
+}
+
+/* line 58, ../../../src/assets/_careerpage.scss */
+#connect .panel-heading {
+  padding: 0;
+}
+
+/* line 64, ../../../src/assets/_careerpage.scss */
+#internships {
+  background: #f9b212;
+}
+/* line 66, ../../../src/assets/_careerpage.scss */
+#internships h2 {
+  color: #fff;
+}
+/* line 69, ../../../src/assets/_careerpage.scss */
+#internships a {
+  color: #582c63;
 }
 
 /**  Offcanvas Nav  http://www.designcouch.com/demos/pure-css-drawer-menu.html**/

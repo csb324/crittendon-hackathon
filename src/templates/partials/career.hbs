@@ -21,28 +21,35 @@
 </section>
 
 <section id="connect" class="row">
-	<h2>Day in the life</h2>
+	<h2>A day in the life</h2>
 
 	{{#each contacts}}
-
 	  {{#if @first}}
-	    <div>
-	      <img class="left" src="{{img}}"/>
-	      <div class="right">
-		      <h3>{{lead}}</h3>
-		      <blockquote>{{quote}}</blockquote>
-		      <p>{{testimonial}}</p>
-	      </div>
-	    </div>
+        <div class="col-sm-3">
+          <img class="left" src="{{img}}"/>
+        </div>
+        <div class="col-sm-9">
+  	      <h3>{{lead}}</h3>
+  	      <blockquote>{{quote}}</blockquote>
+        </div>
+        <div class="col-xs-12">
+          <p>{{testimonial}}</p>
+
+        </div>
+        <div class="clearfix"></div>
 	  {{else}}
-		<div class="panel panel-default col-md-3">
-		  <div class="panel-heading">
-		  	<img src="{{img}}"/>
-		  </div>
-		  <div class="panel-body">
-		    {{lead}}
-		  </div>
-		</div>
+
+    <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <img src="{{img}}"/>
+      </div>
+      <div class="panel-body">
+        {{lead}}
+      </div>
+    </div>
+    </div>
+
 	  {{/if}}
 	{{/each}}
 
@@ -51,12 +58,15 @@
 <section id="internships" class="row">
 	<h2>Internships</h2>
 	{{#each internships}}
-		<div class="panel panel-default col-md-4">
-		  <div class="panel-heading">{{company}}</div>
-		  <div class="panel-body">
-		    {{lead}}
-		  </div>
-		</div>
+    <div class="col-sm-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">{{company}}</div>
+        <div class="panel-body">
+          <p>{{lead}}</p>
+          <a href="{{link}}">Apply now!</a>
+        </div>
+      </div>
+    </div>
 	{{/each}}
 </section>
 

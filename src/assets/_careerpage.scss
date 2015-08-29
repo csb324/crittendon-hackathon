@@ -34,6 +34,39 @@
   }
 }
 
-#description {
+#description, #connect, #internships {
   padding: 30px;
+}
+
+img.left {
+  float: left;
+}
+
+#connect h2 {
+  text-align: center;
+  border-color: $yellow;
+  border-width: 2px 0;
+  border-style: solid;
+  padding: 10px;
+  font-family: $serif;
+  font-style: italic;
+  font-weight: 300;
+  text-transform: none;
+}
+
+#connect {
+  .panel-heading {
+    padding: 0;
+  }
+}
+
+
+#internships {
+  background: $yellow;
+  h2 {
+    color: #fff;
+  }
+  a {
+    color: lighten($purple, 5%);
+  }
 }
