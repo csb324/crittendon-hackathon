@@ -25,15 +25,16 @@
 
 	{{#each contacts}}
 	  {{#if @first}}
-        <div class="col-sm-3">
-          <img class="left" src="{{img}}"/>
+        <div class="col-sm-5">
+          <img class="left" src="{{#if img}}{{../../../assets}}/{{img}}{{else}}https://unsplash.it/200{{/if}}"/>
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-7">
   	      <h3>{{lead}}</h3>
   	      <blockquote>{{quote}}</blockquote>
         </div>
+
         <div class="col-xs-12">
-          <p>{{testimonial}}</p>
+          <p class="testimonial">{{testimonial}}</p>
 
         </div>
         <div class="clearfix"></div>
@@ -42,7 +43,7 @@
     <div class="col-sm-4">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <img src="{{img}}"/>
+        <img src="{{#if img}}{{../../../assets}}/{{img}}{{else}}https://unsplash.it/200{{/if}}"/>
       </div>
       <div class="panel-body">
         {{lead}}
