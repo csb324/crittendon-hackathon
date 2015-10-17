@@ -14,7 +14,7 @@ component: offcanvas-navbar
   <ul>
     {{#each pages}}
     <li{{#if this.isCurrentPage}} class="active"{{/if}}>
-      <a href="{{relative dest this.dest}}">{{ data.title }}</a>
+      <a href="{{../sitepath}}/{{filename}}">{{ data.title }}</a>
     </li>
     {{/each}}
   </ul>
