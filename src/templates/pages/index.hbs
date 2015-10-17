@@ -24,8 +24,10 @@ layout: default.hbs
       {{#each pages}}
         <div class="col-sm-4">
           <div class="career-panel">
-            <a href="/{{basename}}.html">
+
+            <a href="{{../../../sitepath}}/{{filename}}">
             {{ data.title }}
+            {{sitepath}}
             <i class="glyphicon glyphicon-{{ data.icon }}"></i>
             </a>
           </div>
