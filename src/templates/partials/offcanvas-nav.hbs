@@ -6,16 +6,21 @@ component: offcanvas-navbar
 <label for="drawer-toggle" id="drawer-toggle-label"></label>
 <nav id="drawer">
   <div class="sidenav-logo">
-    <a href="/">
+    <a href="{{sitepath}}/">
       <img src="/assets/crittenton_color.jpg" alt="Crittendon">
     </a>
     <h3><span class="light">Red Carpet</span> Careers</h3>
   </div>
   <ul>
-    {{#each pages}}
-    <li{{#if this.isCurrentPage}} class="active"{{/if}}>
-      <a href="{{../sitepath}}/{{filename}}">{{ data.title }}</a>
-    </li>
-    {{/each}}
+    {{#tags}}
+      {{#is tag "careers"}}
+        {{#each pages}}
+          <li{{#if this.isCurrentPage}} class="active"{{/if}}>
+            <a href="{{../../../sitepath}}/{{filename}}">{{ data.title }}</a>
+          </li>
+        {{/each}}
+      {{/is}}
+    {{/tags}}
+
   </ul>
 </nav>
