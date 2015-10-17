@@ -75,7 +75,7 @@ module.exports = function(grunt) {
       options: {
         flatten: true,
         assets: '<%= config.dist %>/assets',
-        sitepath: '',
+        sitepath: 'crittenton-hackathon',
         layoutdir: '<%= config.src %>/templates/layouts',
         data: '<%= config.src %>/data/*.{json,yml}',
         partials: '<%= config.src %>/templates/partials/*.hbs',
